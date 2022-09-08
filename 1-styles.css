@@ -8,7 +8,8 @@ a {
     position: relative;
 }
 
-a::after { /*To create the underline of the text*/
+/*To create the underline of the text*/
+a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -18,9 +19,9 @@ a::after { /*To create the underline of the text*/
     background-color: #bc0032;
     transform-origin: bottom left; /* Transform property of the underline to move from left to right */
     transition: transform 0.25s ease-out;
-    transform: scaleX(0); /* The anchor tag to be underlined when hovered */
-}                           /* sclaeX defines a transformation that resizes an element along the x-axis (horizontally) */
+    transform: scaleX(0);   /* The anchor tag to be underlined when hovered */
+}                           /* scleX defines a transformation that resizes an element along the x-axis (horizontally) */
                             /* 0 will make the element to be invisible */
 a:hover::after {
-    transform: scaleX(1); /*Display the text underline on the mouse hover*/
+    transform: scaleX(1);    /*Display the text underline on the mouse hover*/
 }
