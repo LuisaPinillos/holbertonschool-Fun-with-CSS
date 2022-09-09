@@ -2,4 +2,5 @@
 
 ## Obetive
 
-In this project I implement fun layout with HTML and CSS ONLY!
+In this project I implement different layouts with HTML and CSS ONLY!
+ 
