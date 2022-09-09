@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 110px;
+    height: 45px;
+    background-color: #ebebeb;
+    -webkit-appearance: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .4s;
+    cursor: pointer;
+    border: solid #c4c4c4 2px;
+}
+
+input:checked[type="checkbox"] {
+    background-color: #bc0032;
+}
+
+input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    left: -25px;
+    top: -7px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: solid #c4c4c4 2px;
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+input:checked[type="checkbox"]::before {
+    left: 75px;
+    transition: .4s;
+}
+
+.toggle-label {
+    position: relative;
+    font-weight: bold;
+}
+
+.toggle [type="checkbox"]:checked+.toggle-label .toggle-inner::before {
+    position: absolute;
+    bottom: 17px;
+    right: 50px;
+    z-index: 1;
+    content: "Yes";
+    color: #fff;
+}
+
+.toggle [type="checkbox"]:checked +.toggle-label .toggle-switch::before {
+    display: none;
+}
+
+.toggle [type="checkbox"] +.toggle-label .toggle-switch::before {
+    position: absolute;
+    bottom: 17px;
+    right: 30px;
+    z-index: 1;
+    content: "No";
+    color: #B0B0B0;
+}
