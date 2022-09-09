@@ -1,68 +1,104 @@
+:root {
+    --background-color: #dc0025;
+    --bg-secundary: #fff;
+    --border: solid #BD0625 1.5px;
+}
+
+/* --- Menu button --- */
+
 .menu-open  {
     position: relative;
     width: 50px;
     height: 50px;
     -webkit-appearance: none;  /* with out checkbox style */
     cursor: pointer;
-    background-color: #dc0025;
+    background-color: var(--background-color);
+    border: var(--border);
     border-radius: 50%;
     outline: none;
     transition: .1s;
 }
 
-.menu .menu-open + .menu-open-button .menu-line-1{
+.menu .menu-open + .menu-open-button .menu-line-1,
+.menu .menu-open + .menu-open-button .menu-line-2,
+.menu .menu-open + .menu-open-button .menu-line-3 {
     position: absolute;
-    top: 30px;
     left: 29px;
     width: 17px;
     height: 2px;
-    background-color: white;
+    background-color: var(--bg-secundary);
     border-radius: 5px;
     transition: .1s;
+}
+
+.menu .menu-open + .menu-open-button .menu-line-1{
+    top: 30px;
 }
 
 .menu .menu-open + .menu-open-button .menu-line-2 {
-    position: absolute;
     top: 35px;
-    left: 29px;
-    width: 17px;
-    height: 2px;
-    background-color: white;
-    border-radius: 5px;
-    transition: .1s;
 }
 
 .menu .menu-open + .menu-open-button .menu-line-3{
-    position: absolute;
     top: 41px;
-    left: 29px;
-    width: 17px;
-    height: 2px;
-    background-color: white;
-    border-radius: 5px;
-    transition: .1s;
-}
-
-/* checked button */
-
-.menu-open:checked {
-    width: 41px;
-    height: 41px;
-    border: solid #C80123 1.5px;
-    transition: .1s;
 }
 
 .menu-item {
     display: none;
 }
 
-.menu .menu-open:checked + .menu-open-button .menu-line-1{
+/* --- menu hover --- */
+
+.menu-open:hover {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    -webkit-appearance: none;  /* with out checkbox style */
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    outline: none;
+}
+.menu .menu-open:hover + .menu-open-button .menu-line-1,
+.menu .menu-open:hover + .menu-open-button .menu-line-2,
+.menu .menu-open:hover + .menu-open-button .menu-line-3 {
+    position: absolute;
+    left: 32px;
+    width: 17px;
+    height: 2px;
+    background-color: var(--bg-secundary);
+    border-radius: 5px;
+}
+
+.menu .menu-open:hover + .menu-open-button .menu-line-1 {
+    top: 32px;
+}
+
+.menu .menu-open:hover + .menu-open-button .menu-line-2 {
+    top: 38px;
+}
+
+.menu .menu-open:hover + .menu-open-button .menu-line-3{
+    top: 44px;
+}
+
+/* --- Menu checked--- */
+
+.menu-open:checked {
+    width: 41px;
+    height: 41px;
+    border: var(--border);
+    transition: .1s;
+}
+
+.menu .menu-open:checked + .menu-open-button .menu-line-1,
+.menu .menu-open:checked + .menu-open-button .menu-line-3 {
     position: absolute;
     top: 30px;
     left: 25px;
     width: 15px;
     height: 2px;
-    background-color: white;
+    background-color: var(--bg-secundary);
     border-radius: 5px;
     transform: rotate(45deg);
     transition: 0.1s;
@@ -73,27 +109,19 @@
 }
 
 .menu .menu-open:checked + .menu-open-button .menu-line-3{
-    position: absolute;
-    top: 30px;
-    left: 25px;
-    width: 15px;
-    height: 2px;
-    background-color: white;
-    border-radius: 5px;
     transform: rotate(-45deg);
-    transition: 0.1s;
 }
 
-/* when the input is checked, it shows the menu items */
+/* -- when the input is checked, it shows the menu items -- */
 
 .menu-open:checked ~ .menu-item {
     display: block;
     margin: 8px 5px;
-    color: white;
+    color: var(--bg-secundary);
     width: 38.5px;
     height: 38.5px;
-    background-color: #dc0025;
-    border: solid #C80123 1.5px;
+    background-color: var(--background-color);
+    border: var(--border);
     border-radius: 50%;
     text-align: center;
 }
@@ -103,7 +131,7 @@
 }
 
 .menu-open:checked ~ .menu-item:hover {
-    background-color: #fff;
-    color: #dc0025;
-    border: solid #C80123 1.5px;
+    background-color: var(--bg-secundary);
+    color: var(--background-color);
+    border: var(--border);
 }
