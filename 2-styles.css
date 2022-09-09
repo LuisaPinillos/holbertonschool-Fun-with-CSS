@@ -1,4 +1,5 @@
 body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
@@ -10,7 +11,7 @@ body {
 
 input[type="checkbox"] {
     position: relative;
-    width: 110px;
+    width: 120px;
     height: 45px;
     background-color: #ebebeb;
     -webkit-appearance: none;
@@ -22,7 +23,7 @@ input[type="checkbox"] {
 }
 
 input:checked[type="checkbox"] {
-    background-color: #bc0032;
+    background-color: #f80025;
 }
 
 input[type="checkbox"]::before {
@@ -40,7 +41,7 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
-    left: 75px;
+    left: 85px;
     transition: .4s;
 }
 
